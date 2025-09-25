@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #e5d7c4;
+  color: #333;
+  width: 65%;
+  display: block;
+  margin: 0 auto;
+  min-width: 35%;
+  height: 75%;
+}
+
+header {
+  text-align: center;
+  margin: 30px 0;
+  font-family: "Macondo Swash Caps", sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+
+}
+
+section {
+  background: #cfbb99;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgb(76, 61,25);
+  font-family: "Lobster Two";
+}
+
+#journal-entry {
+  width: 95%;
+  height: 120px;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 14px;
+}
+
+textarea {
+  border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+#submitBtn {
+    max-height: 550px;
+    height:50px;
+    background-color: #889063;
+    border: none;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: block;
+    font-size: 16px;
+    font-family: "Lobster Two";
+
+}
+
