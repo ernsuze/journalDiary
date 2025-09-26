@@ -1,3 +1,5 @@
+// shows date and time on top
+
 function dateClock() {
   const now = new Date();
   const date = now.toLocaleDateString();
@@ -8,6 +10,7 @@ function dateClock() {
 }
 window.onload = dateClock;
 
+// saves file 
 const saveBtn = document.getElementById('submitBtn');
 
 saveBtn.addEventListener('click', function(){
@@ -20,3 +23,13 @@ let tempLink = document.createElement("a");
   
   URL.revokeObjectURL(tempLink.href);
 });
+
+// linking the calender
+
+document.addEventListener('DOMContentLoaded', function() {
+        const calendarEl = document.getElementById('calendar')
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth'
+        })
+        calendar.render()
+      })

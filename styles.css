@@ -1,16 +1,22 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 20px;
   background: #e5d7c4;
   color: #333;
-  width: 65%;
   display: block;
-  margin: 0 auto;
   min-width: 35%;
-  height: 75%;
+  margin: 0;
+  padding: 0;
 }
 
-header {
+header, footer {
+  height: 40%;
+  width: 100%;
+  background: #4f5b38;
+  display: block;
+  font-size: 1.5em;
+}
+
+main {
   text-align: center;
   margin: 30px 0;
   font-family: "Macondo Swash Caps", sans-serif;
@@ -26,6 +32,9 @@ section {
   border-radius: 8px;
   box-shadow: 0 2px 6px rgb(76, 61,25);
   font-family: "Lobster Two";
+   width: 65%;
+    margin: 0 auto;
+    margin-bottom: 5%;
 }
 
 #journal-entry {
@@ -55,3 +64,11 @@ textarea {
 
 }
 
+
+#calendar {
+border: 1px solid red;
+margin-top: 4%;
+ width: 65%;
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
