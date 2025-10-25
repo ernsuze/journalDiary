@@ -62,6 +62,27 @@
 
 <footer>Created by <span>Ernsuze</span></footer>
 
+<!--Javascript and Firebase -->
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBJRJ5cyIHk_vlgMP-gT1b_kBRRtpStkkQ",
+    authDomain: "myjournal-diary.firebaseapp.com",
+    projectId: "myjournal-diary",
+    storageBucket: "myjournal-diary.firebasestorage.app",
+    // messagingSenderId: "898927027099",
+    // appId: "1:898927027099:web:9aceb78c468e8f26ec773e"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
   <script src="script.js"></script>
 </body>
 </html>
