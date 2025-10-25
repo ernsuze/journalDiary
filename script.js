@@ -33,3 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         calendar.render()
       })
+
+      // Auth Stuff
+// Signup
