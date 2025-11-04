@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Asimovian&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Macondo+Swash+Caps&display=swap" rel="stylesheet">
 
-<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.19/index.global.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.19/index.global.min.js"></script> -->
 </head>
 
 
@@ -35,14 +35,10 @@
   
 </header>
 
-  <!-- Date and Time -->
-  <main>
-  
-
-    <div id="todayDate">x</div>
-  </main>
 
   <!-- Journal Section -->
+<div class="container">
+  <div class="main">
   <section id="journal">
     <h2>Journal</h2>
     
@@ -57,6 +53,19 @@
     <h2>Daily Scripture</h2>
     <p id="verse">Loading...</p>
   </section>
+</div>
+
+<aside class="at-a-glance">
+<p>Placeholder for Img</p>
+
+<p>Streak</p>
+<p>Mood</p>
+<a href="#">Collection</a>
+<a href="#">Settings</a>
+<p>Add Previous Entry</p>
+
+</aside>
+  </div>
 
 <div id='calendar'></div>
 
@@ -64,11 +73,15 @@
 
 <!--Javascript and Firebase -->
 
+<!-- Firebase Frontend Setup -->
 <script type="module">
-  // Import the functions you need from the SDKs you need
+  // Import Firebase core and features you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+  import { getAuth } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
+  import { getFirestore } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js";
+  import { getStorage } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-storage.js";
+  import { getFunctions, httpsCallable } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-functions.js";
+
 
   // Your web app's Firebase configuration
   const firebaseConfig = {
@@ -76,13 +89,41 @@
     authDomain: "myjournal-diary.firebaseapp.com",
     projectId: "myjournal-diary",
     storageBucket: "myjournal-diary.firebasestorage.app",
-    // messagingSenderId: "898927027099",
-    // appId: "1:898927027099:web:9aceb78c468e8f26ec773e"
+    messagingSenderId: "898927027099",
+    appId: "1:898927027099:web:9aceb78c468e8f26ec773e"
   };
 
-  // Initialize Firebase
+ // Initialize Firebase
   const app = initializeApp(firebaseConfig);
+
+  // Initialize services
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+  const storage = getStorage(app);
+  const functions = getFunctions(app);
+
+  // Example: call your backend function
+  const sayHello = httpsCallable(functions, "sayHello");
+  sayHello().then(result => {
+    console.log("Response from backend:", result.data);
+  });
+
+  console.log("Firebase initialized successfully!");
 </script>
+
   <script src="script.js"></script>
 </body>
 </html>
+
+<!--
+| Line              | Purpose                                                |
+| ----------------- | ------------------------------------------------------ |
+| `initializeApp()` | Starts your Firebase app using your config keys        |
+| `getAuth()`       | Enables Firebase Authentication                        |
+| `getFirestore()`  | Enables Firestore database                             |
+| `getStorage()`    | Enables file uploads/downloads                         |
+| `getFunctions()`  | Connects to your backend Cloud Functions               |
+| `httpsCallable()` | Calls your backend function securely from the frontend |
+
+
+-->
