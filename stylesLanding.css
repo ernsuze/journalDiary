@@ -1,109 +1,118 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #e5d7c4;
-  color: #333;
-  display: block;
-  min-width: 35%;
-  margin: 0;
-  padding: 0;
+font-family: Arial, sans-serif;
+background: #e5d7c4;
+color: #333;
+display: block;
+min-width: 35%;
+margin: 0;
+padding: 0;
+outline: 3px solid gray;
 }
 
+/* footer at the end seems to not go to the bottom fully? */
 
 header {
-  height: 30%;
-  width: 100%;
-  background: #4f5b38;
+height: 30%;
+width: 100%;
+background: #4f5b38;
 
-  font-size: 1.2em;
+font-size: 1.2em;
 }
 
 a:first-of-type {
-  text-decoration: none;
-  padding: 1%;
-  margin-top: 5%;
+text-decoration: none;
+padding: 1%;
+margin-top: 5%;
 }
 
 #introduction {
-  margin: 3%;
-  padding: 5%;
-  outline: 1px solid black;
-  font-size: 2em;
-  background-color: #f7ead8;
+margin: 3%;
+padding: 5%;
+outline: 1px solid black;
+font-size: 2em;
+background-color: #f7ead8;
 }
 
 .cursiveWords {
-   font-family: "Island Moments", cursive;
+font-family: "Island Moments", cursive;
 
-   font-size: 3em;
+font-size: 3em;
 }
 
 button {
-  border-radius: 8px;
-  
+border-radius: 8px;
+width: 25%
+height: 40%;
+padding: 5%;
+margin: 0 auto;
+
 }
 
 button:hover {
-  border-radius: 8px;
-  background-color: #04AA6D;
-  color: white;
-   transition-duration: 3s;
+border-radius: 8px;
+background-color: #04AA6D;
+color: white;
+transition-duration: 3s;
+
 }
 
 footer {
-    height: 50%;
-    width: 100%;
-    background: #5c6943;
+height: 80%;
+width: 100%;
+background: #5c6943;
 }
 
 .quad {
-    outline: 1px solid red;
-    padding: 2%;
-    margin: 20px 0 15px 0;
+outline: 1px solid red;
+padding: 2%;
+margin: 20px 0 15px 0;
 }
 
 #profilePic {
- width: 10%;
- height: 9%;
+width: 10%;
+height: 9%;
 }
 
 .divImg {
-    height: 10%;
-    width: 10%;
+height: 10%;
+width: 10%;
 }
 
-
 .messagebox {
-    outline: 1px solid yellow;
-    width: 70%;
-    height: 10%;
-    display: inline-block;
-    margin-left: 7%;
-    font-size: 1.5em;
-   margin-bottom: 7%;
+outline: 1px solid yellow;
+width: 70%;
+height: 10%;
+display: inline-block;
+margin-left: 7%;
+font-size: 1.5em;
+margin-bottom: 7%;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
-  position: relative;
-  display: inline;
-  margin-left: 80%;
+position: relative;
+display: inline;
+margin-left: 80%;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+left: 70%;
 }
+/* adding the left removed the previous look of the header, but the % is too far */
+
 /* Links inside the dropdown */
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
 }
 
 /* Change color of dropdown links on hover */
