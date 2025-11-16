@@ -35,6 +35,3 @@ document.addEventListener('DOMContentLoaded', function() {
       })
 
       // Auth Stuff
-// Signup
-
-const signupForm = document.querySelector('login-form');
