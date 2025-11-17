@@ -31,24 +31,25 @@
 <a href="/register.html">Register</a>
 </div>
 </div>
-<a href="/index.html">Home</a>
+
 </header>
 
 <main id="container">
-<p>Login</p>
-<div class="left-box">
+
+<!--
 <div class="imgBox">
 <h2>Your Journal</h2>
 
 <img src="your-image.png" alt="Journal illustration" class="center-img">
 
 <h2>Awaits!</h2>
-<span><svg> <!-- Swirly Lines --> </svg></span>
-</div>
+<span><svg> Swirly Lines </svg></span>
 </div>
 
+-->
 <div class="right-box">
-<form action="" method="post" class="login-form">
+    <p>Login</p>
+<form action="" method="post">
 <div class="login-form">
 <label for="email">Enter your email: </label>
 <input type="email" name="email" id="email" required />
@@ -96,13 +97,18 @@ const db = getFirestore(app);
 const storage = getStorage(app);
 const functions = getFunctions(app);
 
-// Example: call your backend function
-const sayHello = httpsCallable(functions, "sayHello");
-sayHello().then(result => {
-console.log("Response from backend:", result.data);
-});
+window.auth = auth;
+window.db = db;
+window.storage = storage;
+window.functions = functions;
 
-console.log("Firebase initialized successfully!");
+// Example: call your backend function
+// const sayHello = httpsCallable(functions, "sayHello");
+//sayHello().then(result => {
+// console.log("Response from backend:", result.data);});
+
+// console.log("Firebase initialized successfully!");
+</script>
 <script src="loginscript.js"></script>
 </body>
 </html>

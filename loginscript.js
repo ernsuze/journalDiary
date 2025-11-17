@@ -1,3 +1,6 @@
+const auth = window.auth;
+const createUserWithEmailAndPassword = window.createUserWithEmailAndPassword;
+
 // ----------------REGISTRATION FORM AUTH-----------------------
 
 const signupForm = document.querySelector('#registerform');
@@ -18,8 +21,8 @@ const lname = signupForm['lname'].value;
 
 //connect to firebase sign up users
 
-auth.createUserWithEmailAndPassword(email, password).then(cred => {
-console.log(email, password);
-})
+createUserWithEmailAndPassword(auth, email, password)
+    .then((cred) => {
+      console.log("User created!", cred.user);
 
 

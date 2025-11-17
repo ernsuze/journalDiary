@@ -8,12 +8,6 @@ background: #F7DDE2;
 
 }
 
-img {
-
-    width: 30%;
-    height: 20%;
-}
-
 header {
 display: flex;
 align-items: center;
@@ -45,7 +39,13 @@ font-size: 1.2rem;
 
 .dropdown {
 position: relative; /* makes dropdown position relative to this */
-width: 5%;
+width: 10%;
+}
+
+#profilePic {
+
+    width: 30%;
+    height: 20%;
 }
 
 .profile {
@@ -55,13 +55,14 @@ cursor: pointer;
 .dropdown-content {
 display: none;
 position: absolute;
-right: 0;            /* aligns dropdown’s right edge to the icon */
+right: 15;            /* aligns dropdown’s right edge to the icon */
 top: 100%;           /* places it below the icon */
 background: white;
 border: 1px solid #ccc;
 border-radius: 4px;
 padding: 0.5rem 0;
 box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
 }
 
 .dropdown a {
@@ -69,14 +70,17 @@ display: block;
 padding: 0.5rem 1rem;
 text-decoration: none;
 color: #333;
+width: 65%;
 }
 
 .dropdown a:hover {
 background: #f0f0f0;
+
 }
 
 .dropdown:hover .dropdown-content {
 display: block; /* show dropdown on hover */
+width: 65%;
 }
 
 /* login form */
@@ -84,8 +88,8 @@ display: block; /* show dropdown on hover */
 #container {
 display: flex;
 outline: 1px solid red;
-width: 50vw;
-height: 40vh;
+width: 40vw;
+height: 65vh;
 background: purple;
 margin: 0 auto;
 padding: 5px;
@@ -94,22 +98,33 @@ min-width: 30%;
 }
 
 p {
-display: block;
+order: 1;
 font-weight: 400;
-color: mauve;
+color: black;
 width: 32.5%;
 height: 15%;
 margin: 0 auto;
 font-size: 2em;
 padding: 3%;
+outline: 1px solid white;
+
+flex-direction: column;
 }
 
 form {
 outline: 2px solid yellow;
 padding: 15%;
 margin: 0 auto;
-width: 70%;
+width: 110%;
 height: 70%;
+display: flex;
+flex-direction: column;
+}
+
+.login-form {
+    outline: 1px solid blue;
+    width: 120%;
+   display: flex;
 }
 
 input {
@@ -117,12 +132,14 @@ padding: 5px;
 border-radius: 5px;
 width: 70%;
 display: block;
+
 }
 
 label {
 display: block;
 font-family: 'sans-serif', 'arial';
 font-size: 1.5em;
+
 }
 
 span {
@@ -132,3 +149,5 @@ width: 45vw;
 height: 35vh;
 
 }
+
+
