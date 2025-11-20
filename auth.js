@@ -27,6 +27,33 @@ const db = getFirestore(app);
 const storage = getStorage(app);
 const functions = getFunctions(app);
 
+/* --------------------------------- CORE FEATURES ------------------------ */
+
+/* user tracking (listening to auth changes - if a user is currently logged in/logged out, note to self have a draft saved when a user doesnt save journal entry)
+*/
+
+onAuthStateChanged(user => {
+// Grab the elements once
+const userHeader = document.getElementById('userHeader');    // User links
+const guestLinks = document.getElementById('guestLinks');    // Login/Register links
+
+
+if (user) {
+    // User is logged in → show user links, hide guest links
+    userHeader.style.display = "block";
+    guestLinks.style.display = "none";
+
+    console.log('User logged in: ', user);
+} else {
+    // User is logged out → hide user links, show guest links
+    userHeader.style.display = "none";
+    guestLinks.style.display = "block";
+
+    console.log('User logged out!');
+}
+
+
+});
 
 
 
@@ -52,4 +79,4 @@ createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
       console.log("User created!", cred.user);
     });
 
-});
+}); 

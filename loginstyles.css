@@ -2,9 +2,8 @@
 margin: 0;
 padding: 0;
 }
-
 body {
-background: #F7DDE2;
+background: #F2EBDF;
 
 }
 
@@ -13,7 +12,7 @@ display: flex;
 align-items: center;
 justify-content: space-between; /* pushes logo/title left, user icon right */
 padding: 0.5rem 1rem;
-background: #F2A7B7;
+background: #F7F5EF;
 border-bottom: 1px solid #ddd;
 position: relative;
 margin-bottom: 15%;
@@ -23,7 +22,7 @@ height: 7vh;
 footer {
 height: 7vh;
 padding: 0.5rem 1rem;
-background: #F2A7B7;
+background: #291c0e;
 display: flex;
 }
 
@@ -43,30 +42,29 @@ width: 10%;
 }
 
 #profilePic {
-
-```
 width: 30%;
 height: 20%;
-
-```
-
 }
 
 .profile {
 cursor: pointer;
 }
 
-.dropdown-content {
+#guestLinks {
 display: none;
 position: absolute;
 right: 15;            /* aligns dropdown’s right edge to the icon */
 top: 100%;           /* places it below the icon */
-background: white;
+background: #F7F5EF;
 border: 1px solid #ccc;
 border-radius: 4px;
 padding: 0.5rem 0;
 box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
+#userHeader {
+list-style-type: none;
+display: none;
 }
 
 .dropdown a {
@@ -74,7 +72,7 @@ display: block;
 padding: 0.5rem 1rem;
 text-decoration: none;
 color: #333;
-width: 65%;
+
 }
 
 .dropdown a:hover {
@@ -82,28 +80,27 @@ background: #f0f0f0;
 
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover #guestLinks {
 display: block; /* show dropdown on hover */
-width: 65%;
+
 }
 
 /* login form */
 
 #container {
 display: flex;
-outline: 1px solid red;
 width: 70vw;
 height: 65vh;
-background: purple;
+background: #A6A77D;
 margin: 0 auto;
 padding: 5px;
 margin-bottom: 25%;
 min-width: 40%;
 justify-content: center;
+
 }
 
 p {
-
 font-weight: 400;
 color: black;
 width: 32.5%;
@@ -111,41 +108,30 @@ height: 15%;
 margin: 0 auto;
 font-size: 2em;
 padding: 3%;
-outline: 1px solid white;
 flex-direction: column;
+
 }
 
 form {
-outline: 2px solid yellow;
-padding: 15%;
 margin: 0 auto;
 width: 110%;
 height: 70%;
 display: flex;
 flex-direction: column;
-row-gap: 10px;
+row-gap: 5%;
 }
 
 form > input::nth-of-type(1), form > input:n:nth-of-type(2) {
-padding: 5px;
 border-radius: 5px;
 width: 70%;
 display: block;
 border-radius: 3px;
+
 }
 
 label {
-
 font-family: 'sans-serif', 'arial';
 font-size: 1.5em;
-}
-
-span {
-outline: 2px solid blue;
-margin: 0 auto;
-width: 45vw;
-height: 35vh;
-
 }
 
 input:last-of-type {
@@ -157,4 +143,3 @@ border-radius: 8px;
 font-size: 1.05em;
 border: none;
 }
-
