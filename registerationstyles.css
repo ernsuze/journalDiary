@@ -1,76 +1,125 @@
-body {
-weight: 100vw;
-height: 100vh;
-font-size: 1em;
-font-family: 'sans-serif', 'arial';
+/* Intro */
+
+* {
+margin: 0;
+padding: 0;
 }
+
+body {
+background: #F2EBDF;
+
+}
+
+header {
+display: flex;
+align-items: center;
+justify-content: space-between; /* pushes logo/title left, user icon right */
+padding: 0.5rem 1rem;
+background: #F7F5EF;
+border-bottom: 1px solid #ddd;
+position: relative;
+margin-bottom: 15%;
+height: 7vh;
+}
+
+footer {
+height: 7vh;
+padding: 0.5rem 1rem;
+background: #291c0e;
+display: flex;
+}
+
+.logo {
+font-weight: bold;
+}
+
+.title {
+flex-grow: 1;
+text-align: center;
+font-size: 1.2rem;
+}
+
+.dropdown {
+position: relative; /* makes dropdown position relative to this */
+width: 10%;
+}
+
+#profilePic {
+width: 30%;
+height: 20%;
+}
+
+.profile {
+cursor: pointer;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+right: 15;            /* aligns dropdown’s right edge to the icon */
+top: 100%;           /* places it below the icon */
+background: #F7F5EF;
+border: 1px solid #ccc;
+border-radius: 4px;
+padding: 0.5rem 0;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown a {
+display: block;
+padding: 0.5rem 1rem;
+text-decoration: none;
+color: #333;
+
+}
+
+.dropdown a:hover {
+background: #f0f0f0;
+
+}
+
+.dropdown:hover .dropdown-content {
+display: block; /* show dropdown on hover */
+
+}
+
+/* Reg Form */
 
 .container {
-outline: 1px solid orange;
-min-width: 35%;
-width: 90%;
-background: #C4A484;
-height: 100%;
+width: 70%;
+height: 10%;
+background: #84A4C4;
+margin: 0 auto;
+padding: 25px;
+min-width: 30%;
+outline: 1px solid red;
+text-align: center;
 }
 
-.login-form {
-outline: 1px solid black;
+form {
 width: 70%;
 min-width: 30%;
 background: #84A4C4;
-height: 80%;
+height: 60%;
 padding: 25px;
 margin: 0 auto;
+display: flex;
+flex-direction: column;
+
+}
+
+main {
+outline: 1px solid brown;
+height: 80vh;
+margin: 15% 0;
 }
 
 input {
-padding: 1%;
-margin: 0 auto;
-display: block;
-}
-
-img {
-
-    width: 30%;
-    height: 20%;
-}
-
-body {
-weight: 100vw;
-height: 100vh;
-font-size: 1em;
-font-family: 'sans-serif', 'arial';
-background: beige;
-}
-
-.container {
-outline: 1px solid orange;
-min-width: 35%;
-width: 95%;
-background: #C4A484;
-height: 65%;
-border-radius: 8px 24px 24px 8px;
-padding: 5%;
-margin: 20px;
-}
-
-.login-form {
-outline: 1px solid black;
-width: 60%;
-min-width: 30%;
-background: #84A4C4;
-height: 80%;
-padding: 25px;
-margin: 0 auto;
-
-}
-
-input {
-width: 100%;
+width: 75%;
 padding: 1%;
 border: 1px solid #ccc;
 border-radius: 4px;
-margin: 5px;
+margin: 0 auto 30px auto;
 }
 
 input[type="submit"] {
@@ -92,59 +141,4 @@ font-weight: 500;
 label {
 margin-bottom: 4px;
 display: block;
-}
-
-.header {
-display: flex;
-align-items: center;
-justify-content: space-between; /* pushes logo/title left, user icon right */
-padding: 0.5rem 1rem;
-background: #f8f8f8;
-border-bottom: 1px solid #ddd;
-position: relative;
-}
-
-.logo {
-font-weight: bold;
-}
-
-.title {
-flex-grow: 1;
-text-align: center;
-font-size: 1.2rem;
-}
-
-.dropdown {
-position: relative; /* makes dropdown position relative to this */
-}
-
-.profile {
-cursor: pointer;
-}
-
-.dropdown-content {
-display: none;
-position: absolute;
-right: 0;            /* aligns dropdown’s right edge to the icon */
-top: 100%;           /* places it below the icon */
-background: white;
-border: 1px solid #ccc;
-border-radius: 4px;
-padding: 0.5rem 0;
-box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.dropdown a {
-display: block;
-padding: 0.5rem 1rem;
-text-decoration: none;
-color: #333;
-}
-
-.dropdown a:hover {
-background: #f0f0f0;
-}
-
-.dropdown:hover .dropdown-content {
-display: block; /* show dropdown on hover */
 }
