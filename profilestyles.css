@@ -27,6 +27,7 @@ height: 7vh;
 padding: 0.5rem 1rem;
 background: #291c0e;
 display: flex;
+margin-top: 5%;
 }
 
 .logo {
@@ -93,55 +94,62 @@ display: block; /* show dropdown on hover */
 display: flex; 
 background-color: white;
 flex-direction: row;
-width: 100vw;
+width: 90%;
 height: 90vh;
 outline: 2px solid red;
+column-gap: 15px;
+padding: 1%;
+margin: 0 auto;
 }
 
 .left-panel {
-background-color: blue;
+background-color: none;
 width: 20%;
 height: 70%;
-outline: 1px solid orange;
+outline: 2px solid orange;
 align-self: center;
 position: fixed;
-/* position: absolute;
 left: 0;
-bottom: 5;
+top: 25%;
 z-index: 1;
 overflow-x: hidden; 
-padding-top: 20px; */
+margin: 0 0 0 0.3%;
+}
+
+.blogstyle {
+    outline: 1px solid yellow;
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+    height: 40%;
+    width: 45%;
+}
+h3 {
+    text-align: center;
+    padding: 2%;
+    border-bottom: 1px solid blue;
 }
 
 
-
-section {
+.journal-feed {
 background-color: gray;
 width: 60%;
-outline: 1px solid yellow;
+outline: 5px solid black;
+flex-grow: 2;
 }
+
 
     
-
-
-
-/* ---------- RIGHT SIDE ------- */
-
-.wrapper {
-  width: 25%;
-  height: 44%;
-  outline: 1px solid blue;;
-}
-
 #sidebarMenu {
-    height: 100%;
-    position: fixed;
-    right: 0;
-    width: 250px;
+    height: 70%;
+    width: 15%;
     margin-top: 60px;
-  transform: translateX(250px);
+  /*transform: translateX(250px); */
     transition: transform 250ms ease-in-out;
     background: #E8DCC2;
+    outline: 3px solid purple;
+    /*position: absolute;*/
+     flex-grow: 1;
 }
 
 .sidebarMenuInner{
@@ -149,6 +157,7 @@ outline: 1px solid yellow;
     padding:0;
     border-top: 1px solid rgba(255, 255, 255, 0.10);
 }
+
 
 .sidebarMenuInner li{
     list-style: none;
@@ -175,23 +184,25 @@ transition: all 0.3s;
    display: none; 
 }
 
-/* starting position set for checkbox */
+input[type="checkbox"] {
+transition: all 0.3s;
+    box-sizing: border-box;
+   display: none; 
+}
+
+/* starting position set for checkbox */ 
 input[type="checkbox"]:checked ~ #sidebarMenu {
     transform: translateX(0);
 } 
 
 .sidebarIconToggle {
    outline: 2px solid blue;
-   transform: translateX(1250px);
+   transform: translate(90%, 30%);
    transition: all 0.3s;
     box-sizing: border-box;
     cursor: pointer;
-    position: absolute;
-    z-index: 99;
-    height: 100%;
-    width: 100%;
-    top: 22px;
-    left: 15px;
+    /* position: absolute; 
+    z-index: 99; */
     height: 22px;
     width: 22px;
 }
@@ -199,7 +210,7 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
 .spinner {
     transition: all 0.3s;
     box-sizing: border-box;
-    position: absolute;
+    /* position: absolute; */
     height: 3px;
     width: 100%;
     background-color: #fff;
@@ -209,13 +220,13 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
 .horizontal {
     transition: all 0.3s;
     box-sizing: border-box;
-    position: relative;
+    /* position: relative; */
     float: left;
     margin-top: 3px;
 }
 
 .diagonal.part-1 {
-    position: relative;
+    /* position: relative; */
     transition: all 0.3s;
     box-sizing: border-box;
     float: left;
@@ -224,7 +235,7 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
 .diagonal.part-2 {
     transition: all 0.3s;
     box-sizing: border-box;
-    position: relative;
+    /* position: relative; */
     float: left;
     margin-top: 3px;
 }
@@ -247,4 +258,27 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     box-sizing: border-box;
     transform: rotate(-135deg);
     margin-top: -9px;
+} 
+
+/* ---------- RIGHT SIDE ------- 
+
+.wrapper {
+  width: 25%;
+  height: 44%;
+  outline: 1px solid blue;;
 }
+
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    right: 0;
+    width: 250px;
+    margin-top: 60px;
+  transform: translateX(250px);
+    transition: transform 250ms ease-in-out;
+    background: #E8DCC2;
+}
+
+
+
+

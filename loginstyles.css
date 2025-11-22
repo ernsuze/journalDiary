@@ -5,7 +5,9 @@ padding: 0;
 body {
 background: #F2EBDF;
 
-}header {
+}
+
+header {
 display: flex;
 align-items: center;
 justify-content: space-between; /* pushes logo/title left, user icon right */
