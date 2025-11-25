@@ -14,8 +14,8 @@ outline: 3px solid gray;
 header {
 height: 30%;
 width: 100%;
-background: #4f5b38;
-
+background-image: url('pexels-nandhukumar-339614.jpg');
+background-position: center;
 font-size: 1.2em;
 }
 
