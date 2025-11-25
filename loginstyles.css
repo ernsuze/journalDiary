@@ -2,9 +2,9 @@
 margin: 0;
 padding: 0;
 }
+
 body {
 background: #F2EBDF;
-
 }
 
 header {
@@ -26,7 +26,7 @@ background: #291c0e;
 display: flex;
 }
 
-.logo {
+/*.logo {
 font-weight: bold;
 }
 
@@ -34,7 +34,7 @@ font-weight: bold;
 flex-grow: 1;
 text-align: center;
 font-size: 1.2rem;
-}
+} */
 
 .dropdown {
 position: relative; /* makes dropdown position relative to this */
