@@ -9,7 +9,7 @@
 
 <body>
 <header>
-<div class="logo"><a href="/index.html">Logo</a></div>
+<a href="/landing.html">myJournal Diary</a>
 <div class="dropdown">
 
 <a href="#profile"> <img src="person-18.png" alt="profile icon" id="profilePic" /> </a>
@@ -31,13 +31,38 @@
 </div>
 </header>
 
-<main id="container">
+<main>
+<form action="" method="post" id='login-form'>
+ <div class="imgcontainer">
+    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+  </div>
 
+ <div class="container">
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="email" id="email" required>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" id="password" required>
+
+
+  <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+   <div class="container">
+     <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+
+
+<!--
 <div class="right-box">
 <p>Login</p>
 <form action="" method="post" id='login-form'>
 
-<label for="email">Enter your email: </label>
+<label for="email">Email</label>
 <input type="email" name="email" id="email" required />
 
 <label for="password">Enter your password: </label>
@@ -47,6 +72,7 @@
 
 </form>
 </div>
+-->
 </main>
 
 <footer></footer>
