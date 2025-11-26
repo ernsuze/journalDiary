@@ -9,6 +9,8 @@
 </head>
 
 <body>
+
+<!-- Header -->
 <header>
 <div class="logo"><a href="/index.html">Logo</a></div>
 <div class="dropdown">
@@ -34,21 +36,27 @@
 </div>
 </header>
 
-<aside class="left-panel">
-</aside>
+<!-- Sidebar -->
+<div id="profilesidebar">
+ 
+  <h2 class="menu">Menu</h2>
+  <ul class='accountlist'>
+    <li><a href="#" class="#">Settings</a></li>
+      <li><a href="#" class="#">Collections</a></li>
+      <li><a href="#" class="#">Add Previous Entry</a></li>
+      <li>Calender Streak</li>
+  </ul>
+</div>
 
-<main id="container">
-
-
-
+<!-- Main Content -->
+  <div id="maincontent" class="#">
+    <button id='toggleBtn'>Profile Menu</button>
 
 <section class="journal-feed">
-
-
-
 <span>
 <h3>My Thoughts</h3>
-<input type="search">
+  <input type="search"><button id="search">Search</button>
+  
 <select name="sorting" id="sorting">
 <option value="ascending">Newer</option>
 <option value="descending">Older</option>
@@ -61,37 +69,13 @@
 
   </div>
 </section>
-
-  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-
-  <label for="openSidebarMenu" class="sidebarIconToggle">
-    <div class="spinner diagonal part-1"></div>
-    <div class="spinner horizontal"></div>
-    <div class="spinner diagonal part-2"></div>
-  </label>
-  
-
-  <div id="sidebarMenu">
-    
-    <ul class="sidebarMenuInner">
-      
-      <li><img src='#' alt='Profile Pic' /> <span>User Name</span></li>
-      
-      <li><a href="/settings.html" target="_blank">Settings</a></li>
-      
-      <li><a href="/collections.html" target="_blank">Collections</a></li>
-      
-      <li><a href="#" target="_blank">Add Previous Entry</a></li>
-      
-      <li><span>Calender</span></li>
-     
-    </ul>
-  </div>
+    </div>
 
 
 
 
-</main>
+</main> 
 <footer></footer>
+<script src="profilefunctions.js"></script>
 </body>
 </html>
