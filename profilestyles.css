@@ -32,12 +32,13 @@ height: 7vh;
   margin: 0;
   padding: 0.5%;  
 }
-/*
+
 #toggleBtn {
-  position: relative;
+    margin-bottom: 10px;
+  /* position: relative;
   left: 92%;
-  top: 25%;
-} */
+  top: 25%; */
+} 
 
 #profilesidebar.open {
    right: 0;
@@ -147,6 +148,7 @@ height: 70vh;
   padding: 16px 0;
   margin: 0 auto;
   align-self: flex-end;
+  height: 30%;
 }
 
 span {
