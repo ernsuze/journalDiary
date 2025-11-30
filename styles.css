@@ -1,112 +1,151 @@
+* {
+margin: 0;
+padding: 0;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: #e5d7c4;
-  color: #333;
-  display: block;
-  min-width: 35%;
-  margin: 0;
-  padding: 0;
+background: #F2EBDF;
+height: 87vh;
 }
 
-header, footer {
-  height: 40%;
-  width: 100%;
-  background: #4f5b38;
-  display: block;
-  font-size: 1.5em;
+header {
+display: flex;
+align-items: center;
+justify-content: space-between; /* pushes logo/title left, user icon right */
+ padding: 0 16px;
+background: #F7F5EF;
+border-bottom: 1px solid #ddd;
+position: relative;
+height: 7vh;
+  margin-bottom: 3%;
 }
 
-img {
-  width: 7%;
-  height: 7%;
-  padding: 1%;
+footer {
+height: 7vh;
+padding: 0.5rem 1rem;
+background: #291c0e;
+justify-content: flex-end;
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
-  position: relative;
-  display: inline-block;
+position: relative; /* makes dropdown position relative to this */
+width: 10%;
 }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+#profilePic {
+width: 30px;
+height: auto;
+background-color: transparent;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.profile {
+cursor: pointer;
+}
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+#guestLinks {
+display: none;
+position: absolute;
+right: 15;            /* aligns dropdown’s right edge to the icon */
+top: 100%;           /* places it below the icon */
+background: #F7F5EF;
+border: 1px solid #ccc;
+border-radius: 4px;
+padding: 0.5rem 0;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+#userHeader {
+list-style-type: none;
+display: none;
+}
 
-main {
-  text-align: center;
-  margin: 30px 0;
-  font-family: "Macondo Swash Caps", sans-serif;
-  font-weight: 700;
-  font-size: 2em;
+.firstlink {
+  padding: 0;
+  width: 30px;
+}
+
+#refreshicon {
+  width: 30px;
+  height: 20px;
+  margin: 15px;
+}
+
+.dropdown a {
+display: block;
+padding: 0.5rem 1rem;
+text-decoration: none;
+color: #333;
 
 }
 
-section {
-  background: #cfbb99;
+.dropdown a:hover {
+background: #F2EBDF;
+
+}
+
+.dropdown:hover #guestLinks {
+display: block; /* show dropdown on hover */
+
+}
+
+/* MAIN BODY */
+
+#container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#journalbox {
+  height: 70%;
+  width: 80%;
+align-self: center;
+}
+
+#editor {
+
+  height: 300px;
+}
+#quotebox {
+  background: #E8DCC2;
+  color: white;
+  border-radius: 5px;
+  text-align: right;
   padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgb(76, 61,25);
-  font-family: "Lobster Two";
-   width: 65%;
-    margin: 0 auto;
-    margin-bottom: 5%;
-}
-
-#journal-entry {
-  width: 95%;
-  height: 120px;
-  margin: 10px 0;
-  padding: 10px;
-  font-size: 14px;
-}
-
-textarea {
-  border: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  border-radius: 8px;
+  width: 70%;
+align-self: center;
+  height: 40%;
 }
 
 #submitBtn {
-    max-height: 550px;
-    height:50px;
-    background-color: #889063;
-    border: none;
-    border-radius: 8px;
-    margin: 0 auto;
-    display: block;
-    font-size: 16px;
-    font-family: "Lobster Two";
+  width: 10%;
+  height: 40px;
+  align-self: center;
+}
 
+h3 {
+  padding: 5px 0;
+  text-align: center;
+}
+p {
+  text-align: left;
+  font-size: 2em;
+  padding-left: 10px;
 }
 
 
-#calendar {
-border: 1px solid red;
-margin-top: 4%;
- width: 65%;
-  margin: 0 auto;
-  margin-bottom: 5%;
+
+hr {
+ border: none;
+  height: 2px;
+  width: 50%;
+  margin: 10px auto;
+background: linear-gradient(
+    to right,
+    rgba(0,0,0,0),
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0)
+  );
 }
+

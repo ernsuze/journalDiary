@@ -3,11 +3,12 @@
 * {
 margin: 0;
 padding: 0;
+box-sizing: border-box;
 }
 
 body {
 background: #F2EBDF;
-
+height: 87vh;
 }
 
 header {
@@ -18,7 +19,7 @@ padding: 0.5rem 1rem;
 background: #F7F5EF;
 border-bottom: 1px solid #ddd;
 position: relative;
-margin-bottom: 15%;
+margin-bottom: 5%;
 height: 7vh;
 }
 
@@ -26,31 +27,31 @@ footer {
 height: 7vh;
 padding: 0.5rem 1rem;
 background: #291c0e;
-display: flex;
 }
 
 .logo {
 font-weight: bold;
 }
 
-.title {
-flex-grow: 1;
-text-align: center;
-font-size: 1.2rem;
-}
 
 .dropdown {
 position: relative; /* makes dropdown position relative to this */
 width: 10%;
 }
 
-#profilePic {
-width: 30%;
-height: 20%;
+.firstlink {
+  padding: 0;
+  width: 30px;
 }
 
 .profile {
 cursor: pointer;
+}
+
+#profilePic {
+width: 30px;
+height: auto;
+background-color: transparent;
 }
 
 .dropdown-content {
@@ -85,45 +86,66 @@ display: block; /* show dropdown on hover */
 
 /* Reg Form */
 
-.container {
-width: 70%;
-height: 10%;
-background: #84A4C4;
-margin: 0 auto;
-padding: 25px;
-min-width: 30%;
-outline: 1px solid red;
-text-align: center;
+ input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
 }
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+  width: 80%;
+}
+
+
+.container {
+
+min-width: 30%;
+
+}
+
+.container .existinglogin {
+    text-align: center;
+}
+
 
 form {
-width: 70%;
-min-width: 30%;
-background: #84A4C4;
-height: 60%;
-padding: 25px;
-margin: 0 auto;
-display: flex;
-flex-direction: column;
-
+  width: 60%; 
+  border:1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+   margin: 0 auto;
+  border-radius:8px;
+  box-shadow:0 0 20px -10px #000;
+   background:#e6e6e6;
 }
 
+
+
 main {
-outline: 1px solid brown;
-height: 80vh;
-margin: 15% 0;
+margin-bottom: 5%;
 }
 
 input {
-width: 75%;
-padding: 1%;
+width: 65%;
+padding: 5px;
 border: 1px solid #ccc;
 border-radius: 4px;
 margin: 0 auto 30px auto;
 }
 
 input[type="submit"] {
-width: 40%;
+width: 100px;
 display: block;
 padding: 3px;
 font-size: 1em;
@@ -131,14 +153,35 @@ text-align: center;
 border-radius: 5px;
 }
 
-p, a {
-text-align: center;
-font-color: red;
-font-size: 20px;
-font-weight: 500;
+h1, p {
+  text-align: center;
+  padding: 5px;
 }
 
-label {
-margin-bottom: 4px;
-display: block;
+
+.existinglogin:visited {
+  color: green;
+}
+.existinglogin:hover {
+  color: gray;
+}
+
+.signupbtn {
+  background-color: #7393B3;
+  color: white;
+  padding: 14px 20px;
+  margin: 15px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  opacity: 0.9;
+  border-radius: 4px;
+  transition:all .3s;
+   position: relative;
+  left: 35%;
+}
+
+button:hover { 
+  background:#78788c;
+  color:#fff;
 }
