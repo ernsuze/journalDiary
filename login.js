@@ -49,7 +49,7 @@ signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
     // Signed in 
    
     console.log("User logged!", userCredential);
-  location.href='/index.html';
+  location.href='/main.html';
   })
   .catch((error) => {
     const errorCode = error.code;

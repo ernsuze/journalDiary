@@ -57,6 +57,14 @@ box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 #userHeader {
 list-style-type: none;
 display: none;
+position: absolute;
+right: 15;            /* aligns dropdown’s right edge to the icon */
+top: 100%;           /* places it below the icon */
+background: #F7F5EF;
+border: 1px solid #ccc;
+border-radius: 4px;
+padding: 0.5rem 0;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .firstlink {
@@ -78,12 +86,19 @@ color: #333;
 
 }
 
+
+
 .dropdown a:hover {
 background: #F2EBDF;
 
 }
 
 .dropdown:hover #guestLinks {
+display: block; /* show dropdown on hover */
+
+}
+
+.dropdown:hover #userHeader {
 display: block; /* show dropdown on hover */
 
 }
