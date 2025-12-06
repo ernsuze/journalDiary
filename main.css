@@ -1,0 +1,151 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+background: #F2EBDF;
+height: 87vh;
+}
+
+header {
+display: flex;
+align-items: center;
+justify-content: space-between; /* pushes logo/title left, user icon right */
+ padding: 0 16px;
+background: #F7F5EF;
+border-bottom: 1px solid #ddd;
+position: relative;
+height: 7vh;
+  margin-bottom: 3%;
+}
+
+footer {
+height: 7vh;
+padding: 0.5rem 1rem;
+background: #291c0e;
+justify-content: flex-end;
+}
+
+.dropdown {
+position: relative; /* makes dropdown position relative to this */
+width: 10%;
+}
+
+#profilePic {
+width: 30px;
+height: auto;
+background-color: transparent;
+}
+
+.profile {
+cursor: pointer;
+}
+
+#guestLinks {
+display: none;
+position: absolute;
+right: 15;            /* aligns dropdown’s right edge to the icon */
+top: 100%;           /* places it below the icon */
+background: #F7F5EF;
+border: 1px solid #ccc;
+border-radius: 4px;
+padding: 0.5rem 0;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#userHeader {
+list-style-type: none;
+display: none;
+}
+
+.firstlink {
+  padding: 0;
+  width: 30px;
+}
+
+#refreshicon {
+  width: 30px;
+  height: 20px;
+  margin: 15px;
+}
+
+.dropdown a {
+display: block;
+padding: 0.5rem 1rem;
+text-decoration: none;
+color: #333;
+
+}
+
+.dropdown a:hover {
+background: #F2EBDF;
+
+}
+
+.dropdown:hover #guestLinks {
+display: block; /* show dropdown on hover */
+
+}
+
+/* MAIN BODY */
+
+#container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#journalbox {
+  height: 70%;
+  width: 80%;
+align-self: center;
+}
+
+#editor {
+
+  height: 300px;
+}
+#quotebox {
+  background: #E8DCC2;
+  color: white;
+  border-radius: 5px;
+  text-align: right;
+  padding: 15px;
+  width: 70%;
+align-self: center;
+  height: 40%;
+}
+
+#submitBtn {
+  width: 10%;
+  height: 40px;
+  align-self: center;
+}
+
+h3 {
+  padding: 5px 0;
+  text-align: center;
+}
+p {
+  text-align: left;
+  font-size: 2em;
+  padding-left: 10px;
+}
+
+
+
+hr {
+ border: none;
+  height: 2px;
+  width: 50%;
+  margin: 10px auto;
+background: linear-gradient(
+    to right,
+    rgba(0,0,0,0),
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0)
+  );
+}
+
