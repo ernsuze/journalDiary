@@ -35,5 +35,40 @@ const functions = getFunctions(app);
 
 
 
+// ----------------LOGIN FORM AUTH-----------------------
 
 
+const loginForm = document.querySelector('#login-form');
+loginForm.addEventListener('submit', (e) => {
+e.preventDefault();
+
+const email = loginForm['login-email'].value;
+const password = loginForm['login-password'].value;
+
+signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
+    // Signed in 
+   
+    console.log("User logged!", userCredential);
+  location.href='/index.html';
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+  });
+
+});
+
+// ---------------- AUTH CHANGES -----------------------
+
+onAuthStateChanged(auth, (user) => {
+console.log(user)
+if (user) {
+console.log('user logged in');
+
+} else {
+
+// User is signed out
+
+console.log('user logged out');
+
+}});

@@ -34,6 +34,26 @@ const functions = getFunctions(app);
 
 
 
+// ----------------REGISTRATION FORM AUTH-----------------------
+
+const signupForm = document.querySelector('#registerform');
+
+signupForm.addEventListener('submit', (e) => {
+// prevent default action of page refreshing
+
+e.preventDefault();
+
+//get the user info being typed in
+
+const email = signupForm['reg-email'].value;
+const password = signupForm['reg-password'].value;
+const fname = signupForm['reg-fname'].value;
+const lname = signupForm['reg-lname'].value;
 
 
+//connect to firebase sign up users
+createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
+      console.log("User created!", userCredential);
+    });
 
+}); 
