@@ -75,3 +75,4 @@ logout.addEventListener('click', (e) => {
 });
 }
 )
+// ---------- JOURNAL FIELD  ----------
