@@ -37,6 +37,8 @@
 
 
 <main id="container">
+
+    <input type="text" placeholder="Title" name="entryTitle" id="entryTitle" required>
 <section id="journalbox">
 
 <div id="editor"></div>
@@ -58,7 +60,14 @@ theme: 'snow'
   <label for="addQuote">Add Quote</label>
   <img src='/Refresh_icon.svg.png' alt='refresh' id="refreshicon"/>
   </section>
+  
+  
   <button id="submitBtn">Save Journal</button>
+  <div class="popup-container">
+            <div id="popup">
+                 <p>Your entry has been logged!</p>
+  </div>
+        </div>
   <footer>
   </footer>
 

@@ -118,6 +118,15 @@ display: block; /* show dropdown on hover */
 align-self: center;
 }
 
+#entryTitle {
+   width: 75%;
+   align-self: center;
+   height: 20%;
+   padding: 5px;
+   border: none;
+   font-size: 18px;
+}
+
 #editor {
 
   height: 300px;
@@ -134,10 +143,26 @@ align-self: center;
 }
 
 #submitBtn {
-  width: 10%;
+  width: 12%;
   height: 40px;
   align-self: center;
+  padding: 5px;
 }
+
+.popup-container {
+  width: 25%;
+height: 15%;
+padding: 5px;
+background: #a6c5a0;
+color: navy;
+font-weight: bold;
+border-radius: 5px;
+font-size: 8px;
+  display: none;
+
+}
+
+
 
 h3 {
   padding: 5px 0;

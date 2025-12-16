@@ -38,47 +38,27 @@ const functions = getFunctions(app);
 
 const signupForm = document.querySelector('#registerform');
 
-signupForm.addEventListener('submit', (e) => {
-// prevent default action of page refreshing
+signupForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
 
-e.preventDefault();
+  const email = signupForm['reg-email'].value;
+  const password = signupForm['reg-password'].value;
+  const fname = signupForm['reg-fname'].value;
+  const lname = signupForm['reg-lname'].value;
 
-//get the user info being typed in
+  const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+  const uid = userCredential.user.uid;
 
-const email = signupForm['reg-email'].value;
-const password = signupForm['reg-password'].value;
-const fname = signupForm['reg-fname'].value;
-const lname = signupForm['reg-lname'].value;
+  await setDoc(doc(db, "Users", uid), {
+    first_name: fname,
+    last_name: lname,
+    email: email,
+    dateCreated: serverTimestamp(),
+    user_uid: uid,
+  });
 
+  console.log("User created + profile saved:", uid);
+  location.href = '/main.html';
 
-
-//connect to firebase sign up users
-createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
-      console.log("User created!", userCredential);
-       const user = userCredential.user
-      const uid = user.uid;
-      
-      createUserCollection(uid, fname, lname, email)
-    });
-
-// ----------------AFTER REG SAVE USER ID TO FIREBASE -----------------------
-
-
-    // Add a new document in collection "users" - when a user first registers, firebase should add them onto my collection for users 
-
-async function createUserCollection(uid, fname, lname, email) {
- await setDoc(doc(db, "Users", uid), {
-  first_name: fname,
-  last_name: lname,
-  email: email,
-dateCreated: serverTimestamp(),
-user_uid: uid,
 });
-
-}   
-
-
-}); 
-
-
 
