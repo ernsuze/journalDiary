@@ -59,9 +59,9 @@ logout.addEventListener('click', (e) => {
 }
 );
 // ---------- JOURNAL FIELD  ----------
-/*
 
-currentUid = " ";
+
+// currentUid = " ";
 
   onAuthStateChanged(auth, (user) => {
     if (user) {
@@ -82,7 +82,7 @@ logHeader.style.display === 'block';
     
     } });
 
-    function addNewEntryToProfile() {
+ /*   function addNewEntryToProfile() {
     // grab from the container
     const journalForm = document.getElementById('editor');
 
