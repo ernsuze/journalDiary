@@ -9,7 +9,7 @@ import {
   onAuthStateChanged 
 } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
 
-import { getFirestore } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js";
+import { getFirestore, collection, getDocs, setDoc, doc, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js";
 import { getStorage } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-storage.js";
 import { getFunctions, httpsCallable } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-functions.js";
 
@@ -50,75 +50,74 @@ const logHeader = document.getElementById('userHeader');
 
 const logout = document.querySelector('#logout');
 logout.addEventListener('click', (e) => {
-    e.preventDefault();
     signOut(auth).then(() => {
   console.log('Sign-out successful');
 }).catch((error) => {
-  // An error happened.
+  console.error('Logout error:', error);
 });
-}
-);
+});
 // ---------- JOURNAL FIELD  ----------
 
 
-// currentUid = " ";
+let currentUid = null;
 
   onAuthStateChanged(auth, (user) => {
-    if (user) {
-    
-    const uid = user.uid;
-    
-if (guestHeader.style.display === 'block') {
-guestHeader.style.display === 'none';
-} else {
-logHeader.style.display === 'block';
-}    
-    
+
+
+
+if (user) {
+        // User is logged in
+           currentUid = user.uid;
+        guestHeader.style.display = 'none';
+        logHeader.style.display = 'block';
     } else {
-    
-    // User is signed out
-    
-    location.href = '/landing.html';
-    
-    } });
+       currentUid = null;
+        // User is logged out
+        guestHeader.style.display = 'block';
+        logHeader.style.display = 'none';
 
-  function addNewEntryToProfile() {
-    // grab from the container
-    const journalForm = document.getElementById('editor');
-
-// access the content inside(title, date, text content)
-
-const eTitle = document.getElementById('entryTitle').value;
-
-const entryDate = serverTimestamp(),
-
-// reference: https://github.com/slab/quill/issues/2300
-const entries = quill.getContents().ops;
-
-// Create a data object with all the info you want to save:
-
-journalData = { 
-content: entries, 
-createdAt: timestamp, 
-title: journalTitle; 
-//entryID:'', // i want firebase to do this
-
-
+         location.href = '/landing.html';
     }
+});  
+    
+ 
+// Define the function
+function addNewEntryToProfile() {
+    if (currentUid === null) {
+        return; // Exit if not logged in
+    }
+    
+    // Gather data
+    const eTitle = document.getElementById('entryTitle').value;
+    const entryDate = serverTimestamp();
+    const entries = quill.getContents().ops;
+    // resource: https://github.com/slab/quill/issues/2300
+    
+    const journalData = { 
+        content: entries, 
+        createdAt: entryDate, 
+        title: eTitle
+    };
 
-const popup = document.getElementById("popup");
-    const logBtn = document.querySelector('#submitBtn');
-logBtn.addEventListener('click', (e) => {
-   if (currentUid === null) {
-   e.preventDefault();
-// popup for 'Session Timeout - Please login again. for maybe 3 seconds before redirecting to LOGIN page
-   } else {
-      //save it to the journal subcollection:
-     
-     addDoc(collection(db, "Users", currentUid, "JournalEntries"), journalData);
-setTimeout(function() {
-   popup.style.display = 'block';
-}, 4000);
+    // Save to Firebase
+    addDoc(collection(db, "Users", currentUid, "JournalEntries"), journalData);
+    
+     // Clear the form AFTER saving
+    document.getElementById('entryTitle').value = '';  // Clear title input
+    quill.setContents([]);  // Clear Quill editor
+
+    // Show popup
+    const popup = document.getElementById("popup");
+    popup.classList.add('show');
+   setTimeout(function() {
+    popup.classList.remove('show');
+}, 1000);
 }
+
+// Set up the button to call the function
+const logBtn = document.querySelector('#submitBtn');
+logBtn.addEventListener('click', (e) => {
+    addNewEntryToProfile(); // This calls the function above
 });
-  };
+
+  

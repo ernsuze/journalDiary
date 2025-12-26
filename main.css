@@ -78,7 +78,7 @@ box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   margin: 15px;
 }
 
-.dropdown a {
+.dropdown a, #logout {
 display: block;
 padding: 0.5rem 1rem;
 text-decoration: none;
@@ -88,11 +88,16 @@ color: #333;
 
 
 
-.dropdown a:hover {
+.dropdown a:hover, #logout:hover {
 background: #F2EBDF;
 
 }
 
+#logout {
+  border: none;
+  background: none;
+  margin: 0 auto;
+}
 .dropdown:hover #guestLinks {
 display: block; /* show dropdown on hover */
 
@@ -149,17 +154,17 @@ align-self: center;
   padding: 5px;
 }
 
-.popup-container {
-  width: 25%;
-height: 15%;
+#popup{
+  width: 40%;
+height: 17%;
 padding: 5px;
 background: #a6c5a0;
 color: navy;
 font-weight: bold;
 border-radius: 5px;
 font-size: 8px;
-  display: none;
-
+text-align: center;
+display: none;
 }
 
 
