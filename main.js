@@ -82,22 +82,30 @@ logHeader.style.display === 'block';
     
     } });
 
- /*   function addNewEntryToProfile() {
+  function addNewEntryToProfile() {
     // grab from the container
     const journalForm = document.getElementById('editor');
 
 // access the content inside(title, date, text content)
+
 const eTitle = document.getElementById('entryTitle').value;
-// how to get the date? text content i need to look into quill delta
-const entryDate = 
-const entries = 
+
+const entryDate = serverTimestamp(),
+
+// reference: https://github.com/slab/quill/issues/2300
+const entries = quill.getContents().ops;
 
 // Create a data object with all the info you want to save:
 
-journalData = { content: entries, createdAt: timestamp, title: journalTitle; entryID:'', // i want firebase to do this
+journalData = { 
+content: entries, 
+createdAt: timestamp, 
+title: journalTitle; 
+//entryID:'', // i want firebase to do this
 
 
     }
+
 const popup = document.getElementById("popup");
     const logBtn = document.querySelector('#submitBtn');
 logBtn.addEventListener('click', (e) => {
@@ -111,6 +119,6 @@ logBtn.addEventListener('click', (e) => {
 setTimeout(function() {
    popup.style.display = 'block';
 }, 4000);
-    
-
-*/
+}
+});
+  };
