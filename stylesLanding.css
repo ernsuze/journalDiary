@@ -13,18 +13,20 @@ justify-content: space-between; /* pushes logo/title left, user icon right */
 /* background: #F7F5EF; */
 background: rgba(247, 245, 239, 0.95); 
 border-bottom: 1px solid #ddd;
-
 position: relative;
 height: 7vh;
   margin-bottom: 3%;
   z-index: 1;
 }
 
+body {
+    overflow-x: hidden; /* Hide horizontal scroll */
+}
 
 .dropdown {
 position: relative; /* makes dropdown position relative to this */
 width: 10%;
-
+z-index: 100;
 }
 
 #profilePic {
@@ -50,7 +52,6 @@ box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 
-
 .dropdown a {
 display: block;
 padding: 0.5rem 1rem;
@@ -59,7 +60,9 @@ color: #333;
 
 }
 
-
+#dropdown-content {
+    z-index: 101; 
+}
 
 .dropdown a:hover {
 background: #F2EBDF;
@@ -69,7 +72,6 @@ background: #F2EBDF;
 
 .dropdown:hover #guestLinks {
 display: block; /* show dropdown on hover */
-z-index: 1;
 }
 
 /* body of page */
@@ -83,7 +85,7 @@ z-index: 1;
  height: 100vh;
   object-fit: cover;
   opacity: 0.5;
-  z-index: -2;
+  
 }
 
 .heroLanding {
@@ -100,7 +102,7 @@ z-index: 1;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* image in back */
+    z-index: 0; /* image in back */
    
 }
 
