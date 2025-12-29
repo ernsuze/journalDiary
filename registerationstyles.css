@@ -9,6 +9,7 @@ box-sizing: border-box;
 body {
 background: #F2EBDF;
 height: 87vh;
+overflow-y: hidden;
 }
 
 header {
@@ -24,9 +25,10 @@ height: 7vh;
 }
 
 footer {
-height: 7vh;
+height: 5vh;
 padding: 0.5rem 1rem;
 background: #291c0e;
+
 }
 
 .logo {
@@ -113,9 +115,13 @@ min-width: 30%;
 
 }
 
-.container .existinglogin {
-    text-align: center;
+.redirectlink {
+
+  text-align: center;
+  font-size: 1.2em;
 }
+
+
 
 
 form {

@@ -36,45 +36,52 @@
 </div>
 </header>
 
-<!-- Sidebar -->
-<div id="profilesidebar">
- 
-  <h2 class="menu">Menu</h2>
-  <ul class='accountlist'>
-    <li><a href="#" class="#">Settings</a></li>
-      <li><a href="#" class="#">Collections</a></li>
-      <li><a href="#" class="#">Add Previous Entry</a></li>
-      <li>Calender Streak</li>
-  </ul>
-</div>
+<div class='container'>
 
-<!-- Main Content -->
-  <div id="maincontent" class="#">
-    <button id='toggleBtn'>Profile Menu</button>
-
-<section class="journal-feed">
-<span>
-<h3>My Thoughts</h3>
-  <input type="search"><button id="search">Search</button>
-  
-<select name="sorting" id="sorting">
-<option value="ascending">Newer</option>
-<option value="descending">Older</option>
-</select>
-</span>
-
-
-<div class="blogstyle"> 
-<p>the blogs would be listed maybe 5 to 10 at a time </p>
-
-  </div>
-</section>
+  <div class='middle-bar'>
+    <div class='upperHeader'>
+      <span>
+        <h3>Title</h3>
+        <ul class='upperNav'>
+          <li>Search</li>
+            <li>Filter</li>
+          <li>Add Previous Entry</li>
+        </ul>
+      </span>
     </div>
 
+    <div class='middle-container'>
+     <div class='middle-placeholder'>  
+       <ul class='hoverableUserEdits'>
+         <li><button class='toggleOption' id='viewBtn'>View</button></li>
+         <li><button class='toggleOption' id='editBtn'>Edit</button></li>
+         <li><button class='toggleOption' id='deleteBtn'>Delete</button></li>
+       </ul>
+          <span id='innerstuffwrap'>
+         
+      <ul class='innerstuff'>
+         <li>Title:</li>
+         <li>Date Created:</li>
+         <li>Content:</li>
+         <li>Quote:</li>
+       </ul>
+       </span>
+      </div>
+  </div> 
+  </div>
+
+
+  <div class='left-sidebar'>
+<div class='fortheLbtn'>
+    <button id='lBtn'></button>
+    </div>
+    <div class='text-container'>
+    </div>
+  </div>
+</div>
 
 
 
-</main> 
 <footer></footer>
 
 
